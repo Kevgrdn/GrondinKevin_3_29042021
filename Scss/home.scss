@@ -1,0 +1,68 @@
+#city
+{
+    background-color: $background-color;
+    box-shadow: 0 3px 7px inset rgb(212, 211, 211);
+    vertical-align: middle;
+    width: 100%;
+    height: 30px;
+    padding-top: 15px;
+}
+h2
+{
+    text-align: left;
+    padding-left: 3%;
+}
+ul
+{
+    list-style-type: none;
+    padding-left: 0;
+}
+#explore
+{
+    width: 100%;
+    background-color: rgb(246,246,246);
+    padding-top: 10%;
+
+    h1
+    {
+        margin: 0 10%;
+        font-weight: 600;
+    }
+
+    .btn
+    {
+        background: linear-gradient(to bottom right, rgb(218,118,213),rgb(163,99,212));
+        border-radius: 30px;
+        height: 60px;
+        width: 55%;
+        border-width: 0;
+        box-shadow: 0 10px 7px rgb(234, 234, 234);
+        padding: 10px;
+        color: white;
+        margin: 7% 10%;
+        font-size: 1.1em;
+    }
+    p 
+    {
+        margin: 3% 10%;
+        color: grey;
+        font-size: 1.3em;
+    }
+}
+.order
+{
+    .compose
+    {
+        margin: 10% 10%;
+        font-size: 1.2em;
+        height: 65px;
+        width: 80%;
+        box-shadow: 0 10px 10px rgb(234, 234, 234), 0 0 10px rgb(234, 234, 234);
+        border-radius: 20px;
+    }
+    .fas
+    {
+        padding-right: 5%;
+    }
+}
+

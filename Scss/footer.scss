@@ -3,7 +3,10 @@ footer
     background-color: rgb(53,53,53);
     height: 200px;
     font-size: 1.1em;
-
+    ul 
+    {
+        margin-top: 0;
+    }
     .logo_tiny
     {
         background: url(../Maquettes/images/logo/ohmyfood.png) no-repeat;
@@ -11,6 +14,7 @@ footer
         background-position: left;
         filter: invert(1);
         padding: 10% 0 0 6%;
+        margin-top: 0;
     }
     li 
     {

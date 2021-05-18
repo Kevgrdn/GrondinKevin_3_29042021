@@ -37,11 +37,12 @@
     width: 70%;
     display: inline-block;
     text-align: left;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-size: 1.8em;
+    font-weight: 800;
 }
-.far.fa-heart
-{
-    width: 20%;
-}
+
 .plate
 {
     font-size: 1.1em;
@@ -78,6 +79,12 @@
         height: 35%;
         padding-top: 2%;
         padding-left: 3%;
+        font-size: .9em;
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: left;
         &__1
         {
             font-size: .9em;

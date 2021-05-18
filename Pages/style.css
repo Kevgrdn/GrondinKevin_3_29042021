@@ -320,6 +320,23 @@ footer .fas.fa-hands-helping {
   font-size: 1.1em;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fas.fa-arrow-left {
+    font-size: 2em;
+    padding: 5%;
+  }
+
+  .menu {
+    height: 130px;
+  }
+
+  .menu__description {
+    padding-top: 3%;
+  }
+  .menu__description__1 {
+    padding-top: 1%;
+  }
+}
 body {
   width: 100%;
   margin: 0;

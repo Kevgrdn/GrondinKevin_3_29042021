@@ -4,8 +4,7 @@
     box-shadow: 0 3px 7px inset rgb(212, 211, 211);
     vertical-align: middle;
     width: 100%;
-    height: 30px;
-    padding-top: 15px;
+    padding: 2% 0;
     font-weight: 600;
         .fas
         {
@@ -138,7 +137,6 @@ section
 .Font-weight
 {
     font-weight: 600;
-    padding-top: 2%;
 }
 .far.fa-heart
 {
@@ -148,7 +146,10 @@ section
     text-align: center;
     &:active
     {
-        color: rgb(163,99,212);
+        .heart__animation
+        {
+            transform: color(#FF79DA);
+        }
     }
 }
 
@@ -157,10 +158,6 @@ section
     body 
     {
         font-size: 1.4em;
-    }
-    .logo
-    {
-        height: 150px;
     }
     .order__number
     {
@@ -189,11 +186,86 @@ section
     {
         padding: 3.5%;
     }
-    footer 
+}
+@media (min-width: 1281px) 
+{
+    #city
     {
-        height: 300px;
+        padding: 2% 0;
+        font-size: 1.5em;
+    }
+    #explore
+    {
+        padding-top: 2%;
+        p 
+        {
+            margin: 1%;
+        }
+        .btn
+        {
+            margin: 2%;
+            width: 30%;
+            font-size: 1.5em;
+        }
+    }
+    .order
+    {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3%;
+        ul 
+        {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        li 
+        {
+            width: 20%;
+            padding: 2% 5%;
+            .compose
+            {
+                margin: 0;
+                &__padding
+                {
+                    padding: 7%;
+                }
+            }
+            .order__number
+            {
+                margin: 0 -2%;
+                padding: 1.5% 1.75%;
+            }
+        }
+    }
+    section 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        h2 
+        {
+            width: 100%;
+        }
+        a 
+        {
+            width: 40%;
+            height: 350px;
+            margin: 2% 2%;
+        }
+    }
+    .Restaurants
+    {
+        width: 100%;
+        height: 310px;
+        margin: 0;
+        font-size: 1.5em;
+    }
+    .far.fa-heart
+    {
+        padding: 3.5%;
     }
 }
-
 
 

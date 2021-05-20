@@ -10,13 +10,24 @@
   height: 100%;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo {
+    height: 150px;
+  }
+}
+@media (min-width: 1281px) {
+  .logo {
+    width: 50%;
+    height: 150px;
+    margin: 0 25%;
+  }
+}
 #city {
   background-color: #eaeaea;
   box-shadow: 0 3px 7px inset #d4d3d3;
   vertical-align: middle;
   width: 100%;
-  height: 30px;
-  padding-top: 15px;
+  padding: 2% 0;
   font-weight: 600;
 }
 #city .fas {
@@ -134,7 +145,6 @@ section a {
 
 .Font-weight {
   font-weight: 600;
-  padding-top: 2%;
 }
 
 .far.fa-heart {
@@ -143,17 +153,13 @@ section a {
   padding: 6%;
   text-align: center;
 }
-.far.fa-heart:active {
-  color: #a363d4;
+.far.fa-heart:active .heart__animation {
+  transform: color(#FF79DA);
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   body {
     font-size: 1.4em;
-  }
-
-  .logo {
-    height: 150px;
   }
 
   .order__number {
@@ -176,14 +182,79 @@ section a {
   .far.fa-heart {
     padding: 3.5%;
   }
+}
+@media (min-width: 1281px) {
+  #city {
+    padding: 2% 0;
+    font-size: 1.5em;
+  }
 
-  footer {
-    height: 300px;
+  #explore {
+    padding-top: 2%;
+  }
+  #explore p {
+    margin: 1%;
+  }
+  #explore .btn {
+    margin: 2%;
+    width: 30%;
+    font-size: 1.5em;
+  }
+
+  .order {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+  }
+  .order ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .order li {
+    width: 20%;
+    padding: 2% 5%;
+  }
+  .order li .compose {
+    margin: 0;
+  }
+  .order li .compose__padding {
+    padding: 7%;
+  }
+  .order li .order__number {
+    margin: 0 -2%;
+    padding: 1.5% 1.75%;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  section h2 {
+    width: 100%;
+  }
+  section a {
+    width: 40%;
+    height: 350px;
+    margin: 2% 2%;
+  }
+
+  .Restaurants {
+    width: 100%;
+    height: 310px;
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+  .far.fa-heart {
+    padding: 3.5%;
   }
 }
 footer {
   background-color: #353535;
-  height: 200px;
+  height: 170px;
   font-size: 1.1em;
 }
 footer ul {
@@ -209,6 +280,26 @@ footer .fas.fa-hands-helping {
   padding-right: 1%;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    height: 350px;
+  }
+}
+@media (min-width: 1281px) {
+  footer {
+    height: 260px;
+  }
+  footer .logo_tiny {
+    background-size: 7%;
+    padding: 2% 3%;
+  }
+  footer li {
+    margin: 1%;
+  }
+  footer .fas.fa-utensils {
+    padding-right: 1.5%;
+  }
+}
 .logo__previous {
   text-align: left;
 }
@@ -243,7 +334,7 @@ footer .fas.fa-hands-helping {
   width: 70%;
   display: inline-block;
   text-align: left;
-  font-family: "Merriweather", serif;
+  font-family: "Shrikhand", cursive;
   font-style: italic;
   font-size: 1.8em;
   font-weight: 800;
@@ -272,6 +363,10 @@ footer .fas.fa-hands-helping {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  opacity: 0;
+  animation: menu 2s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
 }
 .menu p {
   margin: 0;
@@ -305,6 +400,8 @@ footer .fas.fa-hands-helping {
   align-items: center;
   justify-content: center;
   padding: 0;
+  animation: menu__price 1s;
+  animation-delay: 0.5s;
 }
 
 .btn {
@@ -335,6 +432,81 @@ footer .fas.fa-hands-helping {
   }
   .menu__description__1 {
     padding-top: 1%;
+  }
+}
+@media (min-width: 1281px) {
+  .fas.fa-arrow-left {
+    font-size: 3em;
+    margin: 7% -40%;
+    padding: 0;
+  }
+
+  .plate {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0;
+  }
+
+  .underline {
+    width: 10%;
+    margin: 1% 45%;
+  }
+
+  .menu {
+    height: 150px;
+    width: 25%;
+    margin: 2% 3%;
+  }
+
+  .menu__description {
+    height: auto;
+    width: 70%;
+    padding: 0;
+    font-size: 1.3em;
+    align-items: center;
+    padding-left: 3%;
+    padding-top: 6%;
+  }
+
+  .menu__description__price {
+    height: 100%;
+    font-size: 1.5em;
+  }
+
+  section .restaurant__name__title {
+    font-size: 3em;
+    width: auto;
+    text-align: center;
+    margin: 0;
+  }
+  section .far.fa-heart {
+    padding: 1%;
+    font-size: 3em;
+  }
+  section a {
+    height: auto;
+  }
+  section .btn {
+    margin: 0;
+  }
+}
+@keyframes menu {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes menu__price:hover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10%);
   }
 }
 body {

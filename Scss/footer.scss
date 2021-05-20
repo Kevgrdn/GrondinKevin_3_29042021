@@ -1,7 +1,7 @@
 footer 
 {
     background-color: rgb(53,53,53);
-    height: 200px;
+    height: 170px;
     font-size: 1.1em;
     ul 
     {
@@ -29,5 +29,34 @@ footer
     .fas.fa-hands-helping
     {
         padding-right: 1%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px)
+{
+    footer 
+    {
+        height: 350px;
+    }
+}
+@media (min-width: 1281px) 
+{
+    footer 
+    {
+        height: 260px;
+        .logo_tiny
+        {
+            background-size: 7%;
+            padding: 2% 3%;
+        }
+        li 
+        {
+            margin: 1%;
+        }
+        .fas.fa-utensils
+        {
+            padding-right: 1.5%;
+        }
+        
     }
 }

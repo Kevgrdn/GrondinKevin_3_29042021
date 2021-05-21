@@ -10,14 +10,15 @@
         opacity: 1;
     }
 }
-@keyframes menu__price:hover
+@keyframes menu__price
 {
     0%
     {
-        transform: translateX(0);
+        
     }
     100%
     {
-        transform: translateX(10%);
+        transform: opacity(1);
+        margin: 0 -30%;
     }
 }

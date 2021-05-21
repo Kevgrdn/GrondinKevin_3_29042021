@@ -350,7 +350,7 @@ footer .fas.fa-hands-helping {
   width: 15%;
   height: 5px;
   margin-left: 3%;
-  background-color: #39da5c;
+  background-color: #99E2D0;
 }
 
 .menu {
@@ -400,8 +400,18 @@ footer .fas.fa-hands-helping {
   align-items: center;
   justify-content: center;
   padding: 0;
+}
+.menu__description__price:hover {
   animation: menu__price 1s;
   animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+.menu .price__animation {
+  background-color: #99E2D0;
+  width: 20%;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  opacity: 0;
 }
 
 .btn {
@@ -501,12 +511,10 @@ footer .fas.fa-hands-helping {
     opacity: 1;
   }
 }
-@keyframes menu__price:hover {
-  0% {
-    transform: translateX(0);
-  }
+@keyframes menu__price {
   100% {
-    transform: translateX(10%);
+    transform: opacity(1);
+    margin: 0 -30%;
   }
 }
 body {

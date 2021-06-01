@@ -22,6 +22,32 @@
     margin: 0 25%;
   }
 }
+.spinloader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 14px 0px 0px 0;
+  background: linear-gradient(#9356dc, #ff79da);
+  animation: disparition 8s linear;
+  animation-fill-mode: both;
+}
+
+.loader {
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #99e2d0 transparent #99e2d0 transparent;
+  animation: loader 1.2s linear infinite;
+}
+
 #city {
   background-color: #eaeaea;
   box-shadow: 0 3px 7px inset #d4d3d3;
@@ -117,11 +143,23 @@ section a {
   border-radius: 20px 20px;
   box-shadow: 0 10px 10px #eaeaea, 0 0 10px #eaeaea;
 }
+.Restaurants__new {
+  position: relative;
+}
 .Restaurants img {
   object-fit: cover;
   height: 70%;
   width: 100%;
   border-radius: 20px 20px 0 0;
+}
+
+.new__icon {
+  position: absolute;
+  background-color: #99e2d0;
+  color: #2c9c81;
+  padding: 0.6rem;
+  left: 70%;
+  top: 5%;
 }
 
 .Restaurant__name {
@@ -153,8 +191,13 @@ section a {
   padding: 6%;
   text-align: center;
 }
-.far.fa-heart:active .heart__animation {
-  transform: color(#FF79DA);
+.far.fa-heart:hover {
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: all 0.8s linear;
+  font-weight: 900;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -361,6 +404,7 @@ footer .fas.fa-hands-helping {
   background-color: white;
   margin: 5% 5%;
   display: flex;
+  align-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
   opacity: 0;
@@ -378,7 +422,7 @@ footer .fas.fa-hands-helping {
   padding-top: 2%;
   padding-left: 3%;
   font-size: 0.9em;
-  display: inline-block;
+  display: flex;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -395,23 +439,39 @@ footer .fas.fa-hands-helping {
 }
 .menu__description__price {
   height: 100%;
-  width: 20%;
+  width: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
 }
-.menu__description__price:hover {
-  animation: menu__price 1s;
-  animation-delay: 0.5s;
+.menu__description__price:hover + .price__animation {
+  animation: movetoleft 600ms;
+  transform-origin: right;
+  animation-fill-mode: both;
+}
+.menu__description__price:hover + .price__animation .far.fa-check-circle {
+  transform: rotate(180deg);
+  animation: spin180deg 300ms;
+  animation-timing-function: linear;
   animation-fill-mode: both;
 }
 .menu .price__animation {
-  background-color: #99E2D0;
-  width: 20%;
-  height: 100%;
-  border-radius: 0 20px 20px 0;
   opacity: 0;
+  width: 0;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center right;
+  -moz-transform-origin: right;
+  -webkit-transform-origin-x: right;
+}
+.menu .far.fa-check-circle {
+  color: white;
 }
 
 .btn {
@@ -425,6 +485,11 @@ footer .fas.fa-hands-helping {
   color: white;
   margin: 7% 10%;
   font-size: 1.1em;
+}
+.btn:hover {
+  animation: btn__darken 1s;
+  animation-fill-mode: both;
+  transition-timing-function: ease-in-out;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -511,10 +576,53 @@ footer .fas.fa-hands-helping {
     opacity: 1;
   }
 }
-@keyframes menu__price {
+@keyframes movetoleft {
+  0% {
+    opacity: 0.6;
+  }
   100% {
-    transform: opacity(1);
-    margin: 0 -30%;
+    width: 12%;
+    opacity: 1;
+  }
+}
+@keyframes spin180deg {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes btn__darken {
+  25% {
+    background: linear-gradient(to bottom right, #d172cc, #9f62d1);
+  }
+  50% {
+    background: linear-gradient(to bottom right, #bb65b7, #8c56b8);
+  }
+  100% {
+    box-shadow: 0 10px 7px #818181;
+    background: linear-gradient(to bottom right, #bb65b7, #8f57b9);
   }
 }
 body {

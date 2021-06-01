@@ -66,6 +66,7 @@
     background-color: white;
     margin: 5% 5%;
     display: flex;
+    align-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
     opacity: 0;
@@ -84,7 +85,7 @@
         padding-top: 2%;
         padding-left: 3%;
         font-size: .9em;
-        display: inline-block;
+        display: flex;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -103,30 +104,49 @@
     &__description__price
     {
         height: 100%;
-        width: 20%;
+        width: 10%;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0;
-        &:hover
+        &:hover + .price__animation
         {
-            animation: menu__price 1s;
-            animation-delay: .5s;
-            animation-fill-mode: both;
+           animation: movetoleft 600ms;  
+           transform-origin: right;
+           animation-fill-mode: both;
+           .far.fa-check-circle
+           {
+               transform: rotate(180deg);
+               animation: spin180deg 300ms;
+               animation-timing-function: linear;
+               animation-fill-mode: both;
+           }
+
         }
-    }  
-    .price__animation
-    {
+
         
-        background-color:#99E2D0;
-        width: 20%;
-        height: 100%;
-        border-radius: 0 20px 20px 0;
-        opacity: 0;
     }
-    
-    
+    .price__animation
+    {        
+        opacity: 0;
+        width: 0;
+        height: 100%;
+        background-color: #99E2D0;
+        border-radius: 0 20px 20px 0;
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: center right;
+        -moz-transform-origin: right;
+        -webkit-transform-origin-x: right;
+    }
+    .far.fa-check-circle
+    {
+        color: white;
+    }
 }
+
 .btn
     {
         background: linear-gradient(to bottom right, rgb(218,118,213),rgb(163,99,212));
@@ -139,6 +159,12 @@
         color: white;
         margin: 7% 10%;
         font-size: 1.1em;
+        &:hover
+        {
+            animation: btn__darken 1s;
+            animation-fill-mode: both;
+            transition-timing-function: ease-in-out;
+        }
     }
 @media (min-width: 768px) and (max-width: 1024px)
 {

@@ -10,15 +10,69 @@
         opacity: 1;
     }
 }
-@keyframes menu__price
+@keyframes movetoleft
 {
     0%
     {
-        
+        opacity: .6;
     }
     100%
     {
-        transform: opacity(1);
-        margin: 0 -30%;
+        width: 12%;
+        opacity: 1;
+    }
+}
+@keyframes spin180deg
+{
+    0%
+    {
+        transform: rotate(180deg);
+    }
+    50%
+    {
+    }
+    100%
+    {
+        transform:rotate(360deg)
+    }
+}
+@keyframes disparition {
+    0% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      z-index: -2;
+    }
+  }
+@keyframes loader 
+{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes btn__darken
+{
+    0%
+    {      
+    }
+    25%
+    {
+        background: linear-gradient(to bottom right,rgb(209, 114, 204),rgb(159, 98, 209));;
+    }
+    50%
+    {
+        background: linear-gradient(to bottom right,rgb(187, 101, 183),rgb(140, 86, 184));;
+    }
+    100%
+    {
+        box-shadow: 0 10px 7px rgb(129, 129, 129);
+        background: linear-gradient(to bottom right,rgb(187, 101, 183),rgb(143, 87, 185)); 
     }
 }

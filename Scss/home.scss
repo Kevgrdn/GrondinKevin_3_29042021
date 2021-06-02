@@ -54,6 +54,11 @@ ul
     width: 100%;
     background-color: rgb(246,246,246);
     padding-top: 10%;
+    height: 250px;
+    .btn__margin
+    {
+        margin: 7%;
+    }
 
     h1
     {
@@ -73,6 +78,10 @@ ul
         color: white;
         margin: 7% 10%;
         font-size: 1.1em;
+        a 
+        {
+            color: white;
+        }
     }
     p 
     {
@@ -202,6 +211,15 @@ section
     {
         font-size: 1.4em;
     }
+    #explore
+    {
+        height: 350px;
+        .btn
+        {
+            padding: 15px;
+            font-size: 1.5em;
+        }
+    }
     .order__number
     {
         margin: 4.5% -3%;
@@ -217,6 +235,10 @@ section
     .Restaurants
     {
         height: 300px;
+    }
+    .new__icon
+    {
+        left: 80%;
     }
     .Restaurant__name
     {
@@ -308,7 +330,7 @@ section
     .far.fa-heart
     {
         padding: 3.5%;
-    }
+    } 
 }
 
 

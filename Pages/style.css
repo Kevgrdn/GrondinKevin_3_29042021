@@ -85,7 +85,7 @@ ul {
   font-weight: 600;
 }
 #explore .btn {
-  background: linear-gradient(to bottom right, #da76d5, #a363d4);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border-radius: 30px;
   height: 60px;
   width: 55%;
@@ -512,6 +512,7 @@ footer .fas.fa-hands-helping {
   animation: btn__darken 1s;
   animation-fill-mode: both;
   transition-timing-function: ease-in-out;
+  color: #9356DC 10%;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -640,7 +641,7 @@ footer .fas.fa-hands-helping {
     background: linear-gradient(to bottom right, #d172cc, #9f62d1);
   }
   50% {
-    background: linear-gradient(to bottom right, #bb65b7, #8c56b8);
+    background: linear-gradient(to bottom right, #c56ac1, #955bc5);
   }
   100% {
     box-shadow: 0 10px 7px #818181;

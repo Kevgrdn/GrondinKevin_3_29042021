@@ -1,0 +1,4 @@
+@mixin darken($color,$percentage:'10%'){
+    color: $color 10%;
+    
+}

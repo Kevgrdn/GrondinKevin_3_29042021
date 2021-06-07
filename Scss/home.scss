@@ -68,7 +68,7 @@ ul
 
     .btn
     {
-        background: linear-gradient(to bottom right, rgb(218,118,213),rgb(163,99,212));
+        background: linear-gradient(to bottom right, $color-secondary,$color-primary);
         border-radius: 30px;
         height: 60px;
         width: 55%;

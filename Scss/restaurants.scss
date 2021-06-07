@@ -164,6 +164,7 @@
             animation: btn__darken 1s;
             animation-fill-mode: both;
             transition-timing-function: ease-in-out;
+            @include darken($color-primary);
         }
     }
 @media (min-width: 768px) and (max-width: 1024px)
